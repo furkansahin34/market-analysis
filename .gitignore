@@ -11,6 +11,12 @@ utils/
 .venv/
 .DS_Store
 
+# Kök scraping/pipeline dosyaları (dashboard'a gerekmez)
+/package.json
+/package-lock.json
+/.env.example
+/requirements.txt
+
 # Root node_modules (eğer varsa)
 node_modules/
 
