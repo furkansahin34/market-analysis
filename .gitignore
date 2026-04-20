@@ -1,0 +1,20 @@
+# İstenmeyen tüm dosya ve dizinleri göz ardı et
+agents/
+config/
+data/
+logs/
+reports/
+scrapers/
+scripts/
+utils/
+*.md
+.venv/
+.DS_Store
+
+# Root node_modules (eğer varsa)
+node_modules/
+
+# Dashboard içerisindeki gereksiz dosyalar
+dashboard/node_modules/
+dashboard/.next/
+dashboard/out/
