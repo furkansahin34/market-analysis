@@ -28,16 +28,10 @@ export default function Home() {
       <header className="flex flex-wrap items-end justify-between gap-4 border-b border-[var(--border)] pb-6">
         <div>
           <h1 className="text-3xl font-semibold tracking-tight lg:text-4xl">
-            Tesettür Piyasa
+            Trendyol Tesettür Giyim Analizi
           </h1>
-          <p className="mt-2 flex items-center gap-3 text-sm text-[var(--muted)]">
-            <span>
-              Toplam Ürün: <strong className="font-semibold text-[var(--foreground)]">{ist.toplam_urun}</strong>
-            </span>
-            <span>•</span>
-            <span>
-              Site: <strong className="font-semibold text-[var(--foreground)]">{ist.site_sayisi}</strong>
-            </span>
+          <p className="mt-2 text-sm text-[var(--muted)]">
+            Toplam Ürün: <strong className="font-semibold text-[var(--foreground)]">{ist.toplam_urun}</strong>
           </p>
         </div>
         <div className="text-right">
@@ -45,6 +39,23 @@ export default function Home() {
           <div className="text-xs text-[var(--muted)]">Güncelleme: {tarih}</div>
         </div>
       </header>
+
+      <section className="rounded-2xl border border-[var(--border)] bg-[var(--card)] px-5 py-4 text-sm text-[var(--muted)]">
+        <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-[var(--foreground)]">
+          Skor Formülü
+        </div>
+        <p>
+          <strong className="font-medium text-[var(--foreground)]">Popülerlik Skoru</strong> ={" "}
+          (Favori × <strong className="font-medium text-[var(--foreground)]">%35</strong>) +{" "}
+          (Yorum × <strong className="font-medium text-[var(--foreground)]">%25</strong>) +{" "}
+          (Puan × <strong className="font-medium text-[var(--foreground)]">%20</strong>) +{" "}
+          (İndirim × <strong className="font-medium text-[var(--foreground)]">%10</strong>) +{" "}
+          (Renk Çeşitliliği × <strong className="font-medium text-[var(--foreground)]">%10</strong>)
+        </p>
+        <p className="mt-1 text-xs">
+          Tüm metrikler log-normalize edilir (0-100). Yorum sayısı 500&apos;ün altındaki ürünlere Bayesian düzeltme ile ceza uygulanır.
+        </p>
+      </section>
 
       <UrunTablo urunler={trend.urunler} ortalamaSkor={ist.ortalama_skor} />
 
