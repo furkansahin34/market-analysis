@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Tesettür Piyasa Analizi",
-  description: "Türkiye tesettür moda pazarı trend ve keşif panosu",
+  title: "Trendyol Tesettür Giyim Analizi",
+  description: "Trendyol tesettür giyim ürünlerinin popülerlik skoruna göre sıralandığı eğitim amaçlı analiz sitesi.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
