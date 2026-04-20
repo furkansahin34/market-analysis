@@ -1,26 +1,11 @@
-# İstenmeyen tüm dosya ve dizinleri göz ardı et
-agents/
-config/
-data/
-logs/
-reports/
-scrapers/
-scripts/
-utils/
-*.md
-.venv/
-.DS_Store
-
-# Kök scraping/pipeline dosyaları (dashboard'a gerekmez)
-/package.json
-/package-lock.json
-/.env.example
-/requirements.txt
-
-# Root node_modules (eğer varsa)
+# Node.js / Next.js
 node_modules/
+.next/
+out/
 
-# Dashboard içerisindeki gereksiz dosyalar
-dashboard/node_modules/
-dashboard/.next/
-dashboard/out/
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store
